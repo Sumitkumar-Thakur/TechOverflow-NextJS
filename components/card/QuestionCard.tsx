@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import RenderTag from "../shared/RenderTag";
 import Metric from "../shared/Metric";
-import { formatAndDivideNumber, getTimestamp } from "@/lib/utils";
+import { formatAndDivideNumber, getTimeStamp } from "@/lib/utils";
 
 interface Props {
   _id: string;
@@ -33,7 +33,7 @@ const QuestionCard = ({
             className="subtle-regular text-dark400_light700
           line-clamp-1 flex sm:hidden"
           >
-            {getTimestamp(createdAt)}
+            {getTimeStamp(createdAt)}
           </span>
           <Link href={`/question/${_id}`}>
             <h3
@@ -56,7 +56,7 @@ const QuestionCard = ({
           imgUrl="/assets/icons/avatar.svg"
           alt="User"
           value={author.name}
-          title={` - asked ${getTimestamp(createdAt)}`}
+          title={` - asked ${getTimeStamp(createdAt)}`}
           href={`/profile/${author._id}`}
           isAuthor
           textStyles="body-medium text-dark400_light700"
