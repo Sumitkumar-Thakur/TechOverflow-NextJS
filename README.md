@@ -1,6 +1,10 @@
 # Tech Overflow - A developers community
 
-## 📝 Description
+## 📝 Screenshots
+![Image1](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(18).png)
+![Image2](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(19).png)
+![Image3](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(20).png)
+![Image3](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(21).png)
 
 ## Table of Contents (Optional)
 
