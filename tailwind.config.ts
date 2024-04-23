@@ -1,20 +1,13 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         primary: {
@@ -22,11 +15,11 @@ const config: Config = {
           100: "#FFF1E6",
         },
         dark: {
-          100: "#000000",
+          100: "#000",
           200: "#0F1117",
           300: "#151821",
           400: "#212734",
-          500: "#101012",
+          500: "#3F4354",
         },
         light: {
           900: "#FFFFFF",
@@ -53,9 +46,6 @@ const config: Config = {
       backgroundImage: {
         "auth-dark": "url('/assets/images/auth-dark.png')",
         "auth-light": "url('/assets/images/auth-light.png')",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
         xs: "420px",
