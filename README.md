@@ -1,10 +1,8 @@
-# Tech Overflow - A developers community
+# Tech Overflow - A developers community NEXTJS
 
 ## 📝 Screenshots
 ![Image1](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(18).png)
-![Image2](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(19).png)
-![Image3](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(20).png)
-![Image3](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(21).png)
+![Image4](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(21).png)
 
 ## Table of Contents (Optional)
 
@@ -88,3 +86,8 @@ To fix a bug or enhance an existing module, follow these steps:
 If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue by including your search query and the expected result.
 
 If you'd like to request a new function, feel free to do so by opening an issue.
+
+## More Screenshots
+
+![Image2](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(19).png)
+![Image3](https://github.com/Sumitkumar-Thakur/TechOverflow/blob/main/public/assets/images/Screenshot%20(20).png)
