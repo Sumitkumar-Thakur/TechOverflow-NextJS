@@ -81,7 +81,12 @@ const Answer = ({ question, questionId, authorId }: Props) => {
       );
 
       const aiAnswer = await response.json();
-
+      if (aiAnswer.reply == undefined) {
+        return toast({
+          title: `${"API limit reached"}`,
+          variant: "destructive",
+        });
+      }
       // convert plaintext to html
       const formatedAnswer = aiAnswer.reply.replace(/\n/g, '<br />');
       if (editorRef.current) {
