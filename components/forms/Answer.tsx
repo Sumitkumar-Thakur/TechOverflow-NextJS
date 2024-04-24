@@ -17,9 +17,8 @@ import { useTheme } from "@/context/ThemeProvider";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { createAnswer } from "@/lib/actions/answer.action";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { toast } from "../ui/use-toast";
-import { useRouter } from "next/navigation";
 
 interface Props {
   question: string;
@@ -74,7 +73,9 @@ const Answer = ({ question, questionId, authorId }: Props) => {
   };
 
   const generateAiAnswer = async () => {
-    if (!authorId) return;
+    if (!authorId) {
+      router.push("https://tech-overflow-one.vercel.app/sign-up/");
+    }
     setIsSubmittingAI(true);
     try {
       const response = await fetch(
@@ -88,7 +89,7 @@ const Answer = ({ question, questionId, authorId }: Props) => {
       const aiAnswer = await response.json();
 
       // convert plaintext to html
-      if (aiAnswer.reply == undefined) {
+      if (aiAnswer.reply === undefined) {
         return toast({
           title: `${"API limit reached"}`,
           variant: "destructive",
