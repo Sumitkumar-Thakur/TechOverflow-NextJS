@@ -18,7 +18,6 @@ export const metadata: Metadata = {
   description: "Question page of Tech Overflow",
 };
 
-// write interface here
 interface QuestionDetailsProps {
   params: {
     id: string;
