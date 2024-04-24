@@ -83,7 +83,7 @@ const Answer = ({ question, questionId, authorId }: Props) => {
       const aiAnswer = await response.json();
 
       // convert plaintext to html
-      if (aiAnswer.reply == undefined) {
+      if (aiAnswer.reply === undefined) {
         return toast({
           title: `${"API limit reached"}`,
           variant: "destructive",
