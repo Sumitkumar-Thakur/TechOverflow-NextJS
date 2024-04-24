@@ -19,6 +19,7 @@ import Image from "next/image";
 import { createAnswer } from "@/lib/actions/answer.action";
 import { usePathname } from "next/navigation";
 import { toast } from "../ui/use-toast";
+import { useRouter } from "next/navigation";
 
 interface Props {
   question: string;
@@ -27,6 +28,7 @@ interface Props {
 }
 
 const Answer = ({ question, questionId, authorId }: Props) => {
+  const router = useRouter();
   const { mode } = useTheme();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmittingAI, setIsSubmittingAI] = useState(false);
@@ -41,6 +43,9 @@ const Answer = ({ question, questionId, authorId }: Props) => {
 
   const handleCreatAnswer = async (values: z.infer<typeof AnswerSchma>) => {
     setIsSubmitting(true);
+    if (authorId === undefined) {
+      router.push("https://tech-overflow-one.vercel.app/sign-up/");
+    }
     try {
       await createAnswer({
         content: values.answer,
@@ -83,7 +88,7 @@ const Answer = ({ question, questionId, authorId }: Props) => {
       const aiAnswer = await response.json();
 
       // convert plaintext to html
-      if (aiAnswer.reply === undefined) {
+      if (aiAnswer.reply == undefined) {
         return toast({
           title: `${"API limit reached"}`,
           variant: "destructive",
