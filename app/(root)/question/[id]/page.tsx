@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description: "Question page of Tech Overflow",
 };
 
+// write interface here
 interface QuestionDetailsProps {
   params: {
     id: string;
@@ -63,9 +64,9 @@ const QuestionDetails = async ({
               itemId={JSON.stringify(question._id)}
               userId={JSON.stringify(mongoUser?._id)}
               upvotes={question.upvotes.length}
-              hasupVoted={question.upvotes.includes(mongoUser._id)}
+              hasupVoted={question.upvotes.includes(mongoUser?._id)}
               downvotes={question.downvotes.length}
-              hasdownVoted={question.downvotes.includes(mongoUser._id)}
+              hasdownVoted={question.downvotes.includes(mongoUser?._id)}
               hasSaved={mongoUser?.saved.includes(question._id)}
             />
           </div>
@@ -115,7 +116,7 @@ const QuestionDetails = async ({
       {/* All Answers */}
       <AllAnswers
         questionId={question._id}
-        userId={mongoUser._id}
+        userId={mongoUser?._id}
         totalAnswers={question.answers.length}
         page={searchParams?.page}
         filter={searchParams?.filter}
@@ -125,7 +126,7 @@ const QuestionDetails = async ({
       <Answer
         question={question.content}
         questionId={JSON.stringify(question._id)}
-        authorId={JSON.stringify(mongoUser._id)}
+        authorId={JSON.stringify(mongoUser?._id)}
       />
     </>
   );
